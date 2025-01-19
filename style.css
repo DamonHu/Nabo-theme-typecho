@@ -110,6 +110,7 @@ textarea {
     margin: 0;
     display: flex;
     justify-content: center;
+    padding-bottom: 80px;
 }
 
 .kat .middle {
@@ -284,11 +285,17 @@ article {
 .article.home article,
 .article.post .twitter {
     border-bottom: 1px solid var(--border-dark);
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 0;
+    z-index: 10;
 }
 
 .article.home article {
     margin: 1rem 0;
     border-radius: 5px;
+    position: relative;
 }
 
 .article .dynamic .twitter {
@@ -353,7 +360,7 @@ article {
            position: sticky;
             width: auto;
             margin: 0 auto;
-            min-height: 120px;
+            min-height: 96px;
             white-space: pre-wrap !important;
             display: flex;
             align-items: center;
@@ -533,6 +540,8 @@ article .copyright p a {
     -moz-transition: all .2s ease-out;
     transition: all .2s ease-out;
     z-index: 1;
+    position: sticky;
+    top: 0;
 }
 
 .navigator {
@@ -548,6 +557,8 @@ article .copyright p a {
     -moz-transition: all .2s ease-out;
     transition: all .2s ease-out;
     z-index: 1;
+    position: sticky;
+    top: 0;
 }
 
 .navigator.fixed {
