@@ -47,19 +47,15 @@ $this->need('navigator.php'); ?>
             </div>
             <div class="nick">
                 <div class="name"><?php $author->screenName(); ?></div>
-                <div class="uib"><?= '@' . $author->name . '/' . $_SERVER['SERVER_NAME']; ?></div>
+                <div class="uib">
+                    <span>🌟 推荐技术博客: <a href="https://dongge.org" target="_blank" style="font-size: 15px; font-weight: bold;" >东哥笔记</a></span>
+                </div>
             </div>
             <div class="extra">
                 <div class="describe"><?php $this->options->describe(); ?></div>
             </div>
         <?php endif; ?>
     </div>
-
-    <!--    <div class="nav">-->
-    <!--        <a href="#stream" class="active"><span>推文</span></a>-->
-    <!--        <a href="#article"><span>文章</span></a>-->
-    <!--        <a href="#dynamic"><span>动态</span></a>-->
-    <!--    </div>-->
 
     <div class="article home">
         <?php while ($this->next()): ?>
@@ -77,7 +73,7 @@ $this->need('navigator.php'); ?>
                     </div>
                     <div class="markdown-body describe">
                         <?= lazyload_filter($this->type == 'dynamic' ?
-                            $this->content : get_summary($this->content)); ?>
+                            $this->content : get_summary($this->content, 2)); ?>
                     </div>
                 </div>
                 <?php if ($this->type != 'dynamic'): ?>

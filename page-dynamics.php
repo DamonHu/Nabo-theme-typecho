@@ -11,9 +11,40 @@ $this->need('navigator.php'); ?>
 
 <div id="nabo" class="middle">
     <div class="header">
-        <div class="toolbar">
-            <div class="toolbar-left"><?php $this->title() ?></div>
+        <div class="toolbar" style="padding-top: 20px; padding-bottom: 0px; position: absolute; z-index: 2; right: 0; width: 90%;">
+            <div class="toolbar-left" style="padding-top: 0px; padding-bottom: 0px;"><?php if ($isIndex = true || $this->is('index')) {
+                    
+                } ?></div>
+            <div class="toolbar-right">
+                <div class="menu" onclick="window.function.navigator()">
+                    <i class="fa fa-align-right"></i>
+                </div>
+            </div>
         </div>
+        <?php if ($isIndex || $this->is('author')):
+            if ($isIndex) {
+                $author = $this->widget('Widget_Users_Author', ['uid' => $this->options->uid]);
+            } else {
+                $author = $this->author;
+            } ?>
+            <?php if ($bannerUrl = $this->options->bannerUrl): ?>
+            <div class="banner have" style="background-image: url(<?= $bannerUrl ?>);"></div>
+        <?php else: ?>
+            <div class="banner"></div>
+        <?php endif; ?>
+            <div class="author">
+                <?php $author->gravatar(100, 'G', 'mm', 'avatar'); ?>
+            </div>
+            <div class="nick">
+                <div class="name"><?php $author->screenName(); ?></div>
+                <div class="uib">
+                    <span>🌟 推荐技术博客: <a href="https://dongge.org" target="_blank" style="font-size: 15px; font-weight: bold;" >东哥笔记</a></span>
+                </div>
+            </div>
+            <div class="extra">
+                <div class="describe"><?php $this->options->describe(); ?></div>
+            </div>
+        <?php endif; ?>
     </div>
 
     <div class="article home">

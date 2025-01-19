@@ -127,6 +127,7 @@ window.function.navigator = function (pjax = false) {
 }
 
 window.function.footer = function () {
+    console.log("加载footer")
     window.kat.nabo = $("#nabo");
     window.kat.menu = {
         navigator: $(".navigator"), eject: false,
@@ -136,32 +137,32 @@ window.function.footer = function () {
         window.kat.nabo
     );
 
-    $(document).pjax(
-        'a[href^="' + window.kat.options.siteUrl + '"]:not(a[target="_blank"], a[no-pjax])', {
-            container: "#nabo",
-            fragment: "#nabo",
-            timeout: 8000
-        }
-    ).on('pjax:send',
-        function () {
-            NProgress.start();
-        }).on('pjax:complete', function () {
-        NProgress.done();
-        window.kat.nabo.animate({
-            scrollTop: '0px'
-        }, 700);
+    // $(document).pjax(
+    //     'a[href^="' + window.kat.options.siteUrl + '"]:not(a[target="_blank"], a[no-pjax])', {
+    //         container: "#nabo",
+    //         fragment: "#nabo",
+    //         timeout: 8000
+    //     }
+    // ).on('pjax:send',
+    //     function () {
+    //         NProgress.start();
+    //     }).on('pjax:complete', function () {
+    //     NProgress.done();
+    //     window.kat.nabo.animate({
+    //         scrollTop: '0px'
+    //     }, 700);
 
-        // navigator
-        window.function.navigator(true);
+    //     // navigator
+    //     window.function.navigator(true);
 
-        // highlight
-        window.function.highlight(true);
+    //     // highlight
+    //     window.function.highlight(true);
 
-        // targetAll image owo katex
-        window.function.execute(
-            'image', 'targetAll', 'friends', 'OwO', 'katex'
-        );
-    });
+    //     // targetAll image owo katex
+    //     window.function.execute(
+    //         'image', 'targetAll', 'friends', 'OwO', 'katex'
+    //     );
+    // });
 }
 
 window.function.commentPjax = function (respondId, token) {
