@@ -14,9 +14,9 @@
             'author' => _t('%s 发布的文章')
         ), '', ' - '); ?><?php $this->options->title(); ?></title>
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css?v=0746'); ?>">
-    <link href="https://blog.cdn.yechan.net/public/nanbo/nprogress.min.css" rel="stylesheet">
-    <link href="https://blog.cdn.yechan.net/public/nanbo/font-awesome.min.css" rel="stylesheet">
-    <link href="https://blog.cdn.yechan.net/public/nanbo/jquery.fancybox.min.css" rel="stylesheet"/>
+    <link href="<?php $this->options->themeUrl() ?>assets/nprogress.min.css" rel="stylesheet">
+    <link href="<?php $this->options->themeUrl() ?>assets/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php $this->options->themeUrl() ?>assets/jquery.fancybox.min.css" rel="stylesheet"/>
 
     <!--[if lt IE 9]>
     <script src="//cdnjscn.b0.upaiyun.com/libs/html5shiv/r29/html5.min.js"></script>
@@ -32,7 +32,7 @@
             valve: <?= intval($this->options->galleryValve); ?>
         }
     </script>
-    <script src="https://blog.cdn.yechan.net/public/nanbo/jquery.min.js"></script>
+    <script src="<?php $this->options->themeUrl() ?>assets/jquery.min.js"></script>
     <?php $this->header("pingback=&wlw=&xmlrpc=&rss2=&atom=&rss1=&template=&generator=&antiSpam=&commentReply="); ?>
 </head>
 <body class="kat light">

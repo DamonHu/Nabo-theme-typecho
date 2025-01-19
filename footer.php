@@ -1,30 +1,30 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
-<script src="https://blog.cdn.yechan.net/public/nanbo/lazyload.js"></script>
+<script src="<?php $this->options->themeUrl() ?>assets/lazyload.js"></script>
 <script type="text/javascript">window.function.execute('image', 'targetAll', 'friends');</script>
 
-<script type="text/javascript" src="https://blog.cdn.yechan.net/public/nanbo/katex.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://blog.cdn.yechan.net/public/nanbo/katex.min.css"/>
-<script type="text/javascript" src="https://blog.cdn.yechan.net/public/nanbo/auto-render.min.js"></script>
+<script type="text/javascript" src="<?php $this->options->themeUrl() ?>assets/katex.min.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl() ?>assets/katex.min.css"/>
+<script type="text/javascript" src="<?php $this->options->themeUrl() ?>assets/auto-render.min.js"></script>
 <script type="text/javascript">window.function.katex();</script>
 
 <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/OwO.min.css'); ?>">
 <script src="<?php $this->options->themeUrl('assets/OwO.js'); ?>"></script>
 <script>window.function.OwO();</script>
 
-<script src="https://blog.cdn.yechan.net/public/nanbo/jquery.fancybox.min.js"></script>
-<script src="https://blog.cdn.yechan.net/public/nanbo/highlight.min.js"></script>
+<script src="<?php $this->options->themeUrl() ?>assets/jquery.fancybox.min.js"></script>
+<script src="<?php $this->options->themeUrl() ?>assets/highlight.min.js"></script>
 <script>window.function.highlight();</script>
 
 <?php $this->footer(); ?>
 
-<script src="https://blog.cdn.yechan.net/public/nanbo/jquery.pjax.min.js"></script>
-<script src="https://blog.cdn.yechan.net/public/nanbo/nprogress.min.js"></script>
+<script src="<?php $this->options->themeUrl() ?>assets/jquery.pjax.min.js"></script>
+<script src="<?php $this->options->themeUrl() ?>assets/nprogress.min.js"></script>
 <script>window.function.footer()</script>
 <!-- 输入框的烟花效果 -->  
-<script type="text/javascript" src="//blog.cdn.yechan.net/public/js/commentTyping.js"></script>
+<script type="text/javascript" src="<?php $this->options->themeUrl() ?>assets/commentTyping.js"></script>
 <!-- 时间流逝 -->  
-<script src="//blog.cdn.yechan.net/public/js/timeinfo.js"></script>
+<script src="<?php $this->options->themeUrl() ?>assets/timeinfo.js"></script>
 <!-- 百度统计 -->  
 <script>
 var _hmt = _hmt || [];
